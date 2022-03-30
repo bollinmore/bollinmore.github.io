@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <script>
+	// Hack for scrolling window when linking to anchor tag with fixed nav header
+        var shiftWindow = function() { scrollBy(0, -75) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+      </script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Alvin Chen <bollinmore@gmail.com>">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>219. Contains Duplicate II - SuperQ</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/http.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7467499447239401"
+    crossorigin="anonymous"></script>
+
+    </head>
+
+    <body class="">
+
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<div class="container">
+	<a class="navbar-brand" href="../..">SuperQ</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse">
+          <!-- Main navigation -->
+          <nav class="nav">
+            <ul class="navbar-nav">
+              <li >
+                <a class="nav-link" href="../..">Home</a>
+              </li>
+              <li >
+                <a class="nav-link" href="../../about/">About</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a href="#" role="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="nav-dropdown-Leet Code">Leet Code <b class="caret"></b></a>
+                <div class="dropdown-menu" aria-labelledby="nav-dropdown-Leet Code">
+                  
+<a href="../../math/two_sum/" class="dropdown-item">1. Two Sum</a>
+                  
+<a href="../../math/add_two_numbers/" class="dropdown-item">2. Add Two Numbers</a>
+                  
+<a href="../../string/zigzag_conversion/" class="dropdown-item">6. Zigzag Conversion</a>
+                  
+<a href="../../math/reverse_integer/" class="dropdown-item">7. Reverse Integer</a>
+                  
+<a href="../../two_pointers/3Sum/" class="dropdown-item">15. 3Sum</a>
+                  
+<a href="../../two_pointers/3Sum_closest/" class="dropdown-item">16. 3Sum Closest</a>
+                  
+<a href="../../string/letter_combinations_of_a_phone_number/" class="dropdown-item">17. Letter Combinations of a Phone Number</a>
+                  
+<a href="../../dp/jump_game2/" class="dropdown-item">45. Jump Game II</a>
+                  
+<a href="../group_anagrams/" class="dropdown-item">49. Group Anagrams</a>
+                  
+<a href="../../dp/jump_game/" class="dropdown-item">55. Jump Game</a>
+                  
+<a href="../../sorting/merge_intervals/" class="dropdown-item">56. Merge Intervals</a>
+                  
+<a href="../../dp/unique_paths/" class="dropdown-item">62. Unique Paths</a>
+                  
+<a href="../../dp/minimum_path_sum/" class="dropdown-item">64. Minimum Path Sum</a>
+                  
+<a href="../../dp/unique_binary_search_trees/" class="dropdown-item">96. Unique Binary Search Trees</a>
+                  
+<a href="../../dp/linked_list_cycle2/" class="dropdown-item">142. Linked List Cycle II</a>
+                  
+<a href="../../array/gas_station/" class="dropdown-item">134. Gas Station</a>
+                  
+<a href="../../sorting/largest_number/" class="dropdown-item">179. Largest Number</a>
+                  
+<a href="../../sorting/contains_duplicate/" class="dropdown-item">217. Contains Duplicate</a>
+                  
+<a href="./" class="dropdown-item active">219. Contains Duplicate II</a>
+                  
+<a href="../../math/nim_game/" class="dropdown-item">292. Nim Game</a>
+                  
+<a href="../../binary_search/guess_number_higher_or_lower/" class="dropdown-item">374. Guess Number Higher or Lower</a>
+                  
+<a href="../../math/third_maximum_number/" class="dropdown-item">414. Third Maximum Number</a>
+                  
+<a href="../../sliding_window/longest_repeating_character_replacement/" class="dropdown-item">424. Longest Repeating Character Replacement</a>
+                  
+<a href="../../array/find_pivot_index/" class="dropdown-item">724. Find Pivot Index</a>
+                  
+<a href="../../array/partition_array_into_three_parts_with_equal_sum/" class="dropdown-item">1013. Partition Array Into Three Parts With Equal Sum</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" role="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="nav-dropdown-Code Snippet">Code Snippet <b class="caret"></b></a>
+                <div class="dropdown-menu" aria-labelledby="nav-dropdown-Code Snippet">
+                  
+<a href="../../snippet/random_negative_int/" class="dropdown-item">Generate random negative integer</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+		<i class="fa fa-search"></i> Search
+              </a>
+            </li>
+          </ul>
+	</div>
+	</div>
+      </nav><div id="content" class="container">
+        
+      <div class="row">
+        <div class="col-md-9" role="main">
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    
+    
+    <li class="breadcrumb-item">Leet Code</li>
+    
+    
+    <li class="breadcrumb-item active" aria-current="page">219. Contains Duplicate II</li>
+  </ol>
+</nav>
+
+
+<h1 id="219-contains-duplicate-ii">219. Contains Duplicate II</h1>
+<p><a href="https://leetcode.com/problems/contains-duplicate-ii/">Source</a><br />
+<strong>Topic</strong>: Hash Table, Sliding Window</p>
+<p>Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) &lt;= k.</p>
+<p><strong>Constraints</strong></p>
+<ul>
+<li>1 &lt;= nums.length &lt;= 105</li>
+<li>-109 &lt;= nums[i] &lt;= 109</li>
+<li>0 &lt;= k &lt;= 105</li>
+</ul>
+<h2 id="concept">Concept</h2>
+<p><strong>Map</strong><br />
+Unlikely to #217, we set the <em>offset</em> as the value rather than occurence, so we can add or update the offset if the key is not exist.<br />
+Otherwise, we can calculate the difference from current index to <code>mp[nums[i]]</code>, and return true if it's less than <code>k</code>.</p>
+<p><strong>Set</strong><br />
+Using <em>set</em> as a container to simulate the sliding window because we only care about those value index <code>i</code> to <code>i-k+1</code>, so the key point is to <strong>erase the out bound value</strong><br />
+by <code>st.erase(nums[i-k-1])</code>. The reason to specify a value with offset <code>i-k-1</code> is because the <em>insert</em> operation will put new value at the front of container, so we can't erase the first.  </p>
+<h2 id="complexity">Complexity</h2>
+<p><strong>Time Complexity</strong>  </p>
+<ul>
+<li>Map: O(n)</li>
+<li>Set: O(n), either <code>st.erase</code> &amp; outer loop may take linear time complexity.</li>
+</ul>
+<p><strong>Space Complexity</strong>  </p>
+<ul>
+<li>Map: O(n)</li>
+<li>Set: O(n)</li>
+</ul>
+<h2 id="special-test-case">Special test case</h2>
+<h2 id="code">Code</h2>
+<pre><code class="language-c++">  Map
+    bool containsNearbyDuplicate(vector&lt;int&gt;&amp; nums, int k) {
+        map&lt;int, int&gt; mp;
+        int len = nums.size();
+
+        for (int i=0; i&lt;len; i++) {
+            int v = nums[i];
+            if (!mp.count(v) || i-mp[v]&gt;k)
+                mp[nums[i]] = i;
+            else 
+                return true;
+        }
+
+        return false;
+    }
+
+  Set
+    bool containsNearbyDuplicate(vector&lt;int&gt;&amp; nums, int k) {
+        int len = nums.size();
+        unordered_set&lt;int&gt; st;
+
+        for (int i=0; i&lt;len; i++) {
+            if (i&gt;k) st.erase(nums[i-k-1]);
+            if (st.find(nums[i]) != st.end()) return true;
+            st.insert(nums[i]);
+        }
+
+        return false;
+    }
+</code></pre>
+
+<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+  <li class="last-updated-holder displayDate loading">
+    <span class="last-updated-text">Last updated:</span>
+    <time role="presentation" datetime="2018-10-25T00:00:00.000Z" data-article-date-source="ms.date"></time>
+  </li>
+<!--
+  <li class="readingTime">
+    2 minutes to read
+  </li>
+-->
+  <li class="contributors-holder">
+    <span class="contributors-text">Contributors</span>
+    <ul class="contributors" data-bi-name="contributors"></ul>
+  </li>
+</ul>
+</div>
+        <div class="col-md-3"><div class="navbar-light navbar-expand-md hidden-print sticky-top sticky-offset" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    <div id="toc-collapse" class="navbar-collapse collapse card">
+        <ul class="nav flex-column bs-sidenav">
+            <li class="nav-item main"><a class="nav-link" href="#219-contains-duplicate-ii">219. Contains Duplicate II</a></li>
+                <li class="nav-item">
+                    <a href="#concept" class="nav-link">Concept</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#complexity" class="nav-link">Complexity</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#special-test-case" class="nav-link">Special test case</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#code" class="nav-link">Code</a>
+                </li>
+        </ul>
+    </div>
+</div></div>
+      </div>
+      </div>
+
+      <footer class="col-md-12">
+	<hr>
+	<div class="container">
+	</div>
+      </footer>
+      <script>
+	var base_url = "../..",
+            shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+      </script>
+      <script src="../../js/base.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+      <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="h4 modal-title">Keyboard Shortcuts</p>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
