@@ -1,0 +1,37 @@
+site_name: SuperQ
+site_author: Alvin Chen <bollinmore@gmail.com>
+nav:
+  - Home: index.md
+  - About: about.md
+  - Leet Code:
+    - 1. Two Sum: math/two_sum.md
+    - 2. Add Two Numbers: math/add_two_numbers.md
+    - 6. Zigzag Conversion: string/zigzag_conversion.md
+    - 7. Reverse Integer: math/reverse_integer.md
+    - 15. 3Sum: two_pointers/3Sum.md
+    - 16. 3Sum Closest: two_pointers/3Sum_closest.md
+    - 17. Letter Combinations of a Phone Number: string/letter_combinations_of_a_phone_number.md
+    - 45. Jump Game II: dp/jump_game2.md
+    - 49. Group Anagrams: hash_table/group_anagrams.md
+    - 55. Jump Game: dp/jump_game.md
+    - 56. Merge Intervals: sorting/merge_intervals.md
+    - 62. Unique Paths: dp/unique_paths.md
+    - 64. Minimum Path Sum: dp/minimum_path_sum.md
+    - 96. Unique Binary Search Trees: dp/unique_binary_search_trees.md
+    - 142. Linked List Cycle II: dp/linked_list_cycle2.md
+    - 134. Gas Station: array/gas_station.md
+    - 179. Largest Number: sorting/largest_number.md
+    - 217. Contains Duplicate: sorting/contains_duplicate.md
+    - 219. Contains Duplicate II: hash_table/contains_duplicate2.md
+    - 292. Nim Game: math/nim_game.md
+    - 374. Guess Number Higher or Lower: binary_search/guess_number_higher_or_lower.md
+    - 414. Third Maximum Number: math/third_maximum_number.md
+    - 424. Longest Repeating Character Replacement: sliding_window/longest_repeating_character_replacement.md
+    - 724. Find Pivot Index: array/find_pivot_index.md
+    - 1013. Partition Array Into Three Parts With Equal Sum: array/partition_array_into_three_parts_with_equal_sum.md
+  - Code Snippet:
+    - Generate random negative integer: snippet/random_negative_int.md
+
+theme:
+    name: bootstrap4
+    custom_dir: custom_theme/
