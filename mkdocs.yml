@@ -36,4 +36,13 @@ theme:
     name: material
     font: 
       text: Salsa
+    logo: images/favicon.png
+    favicon: images/favicon.png
     custom_dir: custom_theme/
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
