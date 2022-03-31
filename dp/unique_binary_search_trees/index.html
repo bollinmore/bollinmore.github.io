@@ -10,7 +10,7 @@
         <meta name="author" content="Alvin Chen <bollinmore@gmail.com>">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
     
     
@@ -80,8 +80,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="SuperQ" class="md-header__button md-logo" aria-label="SuperQ" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../../images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -166,8 +165,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="SuperQ" class="md-nav__button md-logo" aria-label="SuperQ" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../../images/favicon.png" alt="logo">
 
     </a>
     SuperQ
@@ -767,12 +765,12 @@
 <p>The idea is to <strong>solve sub problem</strong> in dynamic programming.<br />
 When <code>n = 0</code> or <code>n = 1</code>, there's 1 possible BST exists. But when the <code>n &gt;= 2</code> that means we could break down this problem into sub problem as below:  </p>
 <ul>
-<li>n==2: <strong>left nodes + root + right nodes</strong></li>
-</ul>
-<pre><code>   2       1
+<li>n==2: <strong>left nodes + root + right nodes</strong>
+<div class="highlight"><pre><span></span><code>   2       1
   /   or    \
  1           2
-</code></pre>
+</code></pre></div></li>
+</ul>
 <p>So we can turn this problem into <strong>Find out the combination</strong> while iterate the nodes, the formula of each combination will be <code>numTrees(left) * numTrees(right)</code>, then we can sum up the number because we want to know how many unique BST exists for N.</p>
 <h2 id="complexity">Complexity</h2>
 <p><strong>Time Complexity</strong>  </p>
@@ -780,26 +778,26 @@ When <code>n = 0</code> or <code>n = 1</code>, there's 1 possible BST exists. Bu
 <p><strong>Space Complexity</strong>  </p>
 <p>O(n): Extra space to hold the number of unique BST of N.</p>
 <h2 id="code">Code:</h2>
-<pre><code class="language-c++">class Solution {
-public:
-    int numTrees(int n) {
-        if (n&lt;=1) return 1;
-        vector&lt;int&gt; dp(n+1, 1); // 0-&gt; 1; 1-&gt;1
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numTrees</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dp</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 0-&gt; 1; 1-&gt;1</span>
 
-        for (int nodes=2; nodes&lt;=n; nodes++) {
-            int total = 0;
-            for (int root=1; root&lt;=nodes; root++) {
-                int left = root - 1;
-                int right = nodes - root;
-                total += dp[left] * dp[right];
-            }
-            dp[nodes] = total;
-        }
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nodes</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">nodes</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">nodes</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">root</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">root</span><span class="o">&lt;=</span><span class="n">nodes</span><span class="p">;</span><span class="w"> </span><span class="n">root</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nodes</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">left</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">right</span><span class="p">];</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="n">dp</span><span class="p">[</span><span class="n">nodes</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-        return dp.back();
-    }
-};
-</code></pre>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dp</span><span class="p">.</span><span class="n">back</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
               
             </article>

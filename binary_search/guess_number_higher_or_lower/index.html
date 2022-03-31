@@ -10,7 +10,7 @@
         <meta name="author" content="Alvin Chen <bollinmore@gmail.com>">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
     
     
@@ -80,8 +80,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="SuperQ" class="md-header__button md-logo" aria-label="SuperQ" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../../images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -166,8 +165,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="SuperQ" class="md-nav__button md-logo" aria-label="SuperQ" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../../images/favicon.png" alt="logo">
 
     </a>
     SuperQ
@@ -801,41 +799,41 @@
 <p><strong>Space Complexity</strong>  </p>
 <p>O(1)</p>
 <h2 id="special-test-case">Special test case</h2>
-<pre><code>2126753390
+<p><div class="highlight"><pre><span></span><code>2126753390
 1702766719
-</code></pre>
-<p>The above case will cause buffer overflow exception if our expression is <code>(r+l)/2</code>.</p>
+</code></pre></div>
+The above case will cause buffer overflow exception if our expression is <code>(r+l)/2</code>.</p>
 <h2 id="code">Code</h2>
-<pre><code class="language-c++">/** 
- * Forward declaration of guess API.
- * @param  num   your guess
- * @return       -1 if num is lower than the guess number
- *                1 if num is higher than the guess number
- *               otherwise return 0
- * int guess(int num);
- */
+<div class="highlight"><pre><span></span><code><span class="cm">/** </span>
+<span class="cm"> * Forward declaration of guess API.</span>
+<span class="cm"> * @param  num   your guess</span>
+<span class="cm"> * @return       -1 if num is lower than the guess number</span>
+<span class="cm"> *                1 if num is higher than the guess number</span>
+<span class="cm"> *               otherwise return 0</span>
+<span class="cm"> * int guess(int num);</span>
+<span class="cm"> */</span><span class="w"></span>
 
-class Solution {
-public:
-    int guessNumber(int n) {
+<span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">guessNumber</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-        int l=0, r=n;
-        while (l&lt;=r) {
-            int m = (r-l)/2 + l; // Note: (r+l)/2 will cause buffer overflow exception
-            int ret = guess(m);
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">&lt;=</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">l</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">l</span><span class="p">;</span><span class="w"> </span><span class="c1">// Note: (r+l)/2 will cause buffer overflow exception</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">guess</span><span class="p">(</span><span class="n">m</span><span class="p">);</span><span class="w"></span>
 
-            if (ret &gt; 0)
-                l = m+1;
-            else if (ret &lt; 0)
-                r = m-1;
-            else
-                return m;
-        }
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">else</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-        return -1;
-    }
-};
-</code></pre>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
               
             </article>

@@ -10,7 +10,7 @@
         <meta name="author" content="Alvin Chen <bollinmore@gmail.com>">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
     
     
@@ -80,8 +80,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="SuperQ" class="md-header__button md-logo" aria-label="SuperQ" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../../images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -166,8 +165,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="SuperQ" class="md-nav__button md-logo" aria-label="SuperQ" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../../images/favicon.png" alt="logo">
 
     </a>
     SuperQ
@@ -784,45 +782,45 @@
 <p><strong>Space Complexity</strong>  </p>
 <p>O(n): Where n is max(l1.length, l2.length).</p>
 <h2 id="code">Code:</h2>
-<pre><code class="language-c++">/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode *p=l1, *q=l2, *dummy, *curr;
-        int carry=0;
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Definition for singly-linked list.</span>
+<span class="cm"> * struct ListNode {</span>
+<span class="cm"> *     int val;</span>
+<span class="cm"> *     ListNode *next;</span>
+<span class="cm"> *     ListNode() : val(0), next(nullptr) {}</span>
+<span class="cm"> *     ListNode(int x) : val(x), next(nullptr) {}</span>
+<span class="cm"> *     ListNode(int x, ListNode *next) : val(x), next(next) {}</span>
+<span class="cm"> * };</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">ListNode</span><span class="o">*</span><span class="w"> </span><span class="n">addTwoNumbers</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span><span class="w"> </span><span class="n">l1</span><span class="p">,</span><span class="w"> </span><span class="n">ListNode</span><span class="o">*</span><span class="w"> </span><span class="n">l2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">ListNode</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">l1</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">q</span><span class="o">=</span><span class="n">l2</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">dummy</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">curr</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">carry</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 
-        dummy = new ListNode();
-        curr = dummy; // a pointer to the dummy node
+<span class="w">        </span><span class="n">dummy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ListNode</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">curr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dummy</span><span class="p">;</span><span class="w"> </span><span class="c1">// a pointer to the dummy node</span>
 
-        while (p || q) {
-            int tmp = 0 + carry;
-            if (p) tmp += p-&gt;val;
-            if (q) tmp += q-&gt;val;
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">carry</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">q</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">;</span><span class="w"></span>
 
-            carry = tmp/10;
-            curr-&gt;next = new ListNode(tmp%10); // make link to the dummy
-            curr = curr-&gt;next; // move curr pointer to next one
+<span class="w">            </span><span class="n">carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ListNode</span><span class="p">(</span><span class="n">tmp</span><span class="o">%</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// make link to the dummy</span>
+<span class="w">            </span><span class="n">curr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span><span class="w"> </span><span class="c1">// move curr pointer to next one</span>
 
-            if (p) p = p-&gt;next;
-            if (q) q = q-&gt;next;
-        }
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-        if (carry) // ethier 0 or 1
-            curr-&gt;next = new ListNode(carry);
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">carry</span><span class="p">)</span><span class="w"> </span><span class="c1">// ethier 0 or 1</span>
+<span class="w">            </span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ListNode</span><span class="p">(</span><span class="n">carry</span><span class="p">);</span><span class="w"></span>
 
-        return dummy-&gt;next;
-    }
-};
-</code></pre>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dummy</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
               
             </article>
