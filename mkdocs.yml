@@ -33,5 +33,7 @@ nav:
     - Generate random negative integer: snippet/random_negative_int.md
 
 theme:
-    name: bootstrap4
+    name: material
+    font: 
+      text: Salsa
     custom_dir: custom_theme/
