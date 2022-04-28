@@ -31,6 +31,8 @@ nav:
     - 1013. Partition Array Into Three Parts With Equal Sum: array/partition_array_into_three_parts_with_equal_sum.md
   - Code Snippet:
     - Generate random negative integer: snippet/random_negative_int.md
+  - Note:
+    - CefPython, Upgrade CEF version: python/cefpython_upgrade_cef.md
 
 theme:
     name: material
