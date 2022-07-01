@@ -33,6 +33,9 @@ nav:
     - Generate random negative integer: snippet/random_negative_int.md
   - Note:
     - CefPython, Upgrade CEF version: python/cefpython_upgrade_cef.md
+    - PyInstaller: python/pyinstaller.md
+  - SPDX:
+    - Intro: spdx/intro.md
 
 theme:
     name: material

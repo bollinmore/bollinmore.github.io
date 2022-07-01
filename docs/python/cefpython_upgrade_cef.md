@@ -10,9 +10,17 @@
 * 下載 [CefPython 原始碼](https://github.com/cztomczak/cefpython.git)
 * 下載 [Prebuilt](https://cef-builds.spotifycdn.com/index.html#windows64) 不然從CEF原始碼編譯會太久
 * 解開下載的prebuilt壓縮檔，並且放在**路徑較短的目錄**，原因在於編譯過程中可能會出現路徑過程的錯誤: VS 2022 Cannot open compiler generated file: '': Invalid argument
-* 修改編譯設定
-* 根據你下載的版本去修改 *cef_version_win.h* (Linux: *cef_version_linux.h*)
-* 執行 `mkdir build && cd build && python ..\tool\build.py xx.x`
+* `mkdir build && cd build` 建立build資料夾並移至該資料夾
+* `pip install -r tools\requirements.txt`
+* 修改 *src\cef_version_win.h* 此步驟要設定正確版號才能正確往下執行
+* 修改 *tools\common.py* 主要原因是我使用Python 3.10
+* 修改編譯設定*tools\common.py* & *tools\automate.py*，增加VS2022路徑
+* 為了避免 code page (950) 錯誤，開啟 *C:\CefBin\cef_binary_101.0.15+gca159c5+chromium-101.0.4951.54_windows64\tests\ceftests\os_rendering_unittest.cc* 並加上下列兩行，此檔案必須另存為UTF-8 with BOM
+    * #pragma warning(disable : 4819)
+    * #pragma warning(disable : 4566)
+* `python ..\tools\automate.py --prebuilt-cef --build-dir C:\CefBin\`
+* 上述指令完成會在*C:\CefBin*下產生一個新的資料夾，複製到*CefPython\build*
+* 執行 `python ..\tool\build.py xx.x`
 
 ## CefPython 編譯運作機制(Prebuilt)
 * 執行 build.py 後，其內部會呼叫 cython_setup.py 去產生需要的標頭檔，第二次呼叫則腳本會檢查 *build\build_cefpython* 目錄下是否還有未處理的*.pyx檔案，沒有則代表已經產生 cefpython_py39_fixed.h
