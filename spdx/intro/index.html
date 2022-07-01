@@ -15,7 +15,7 @@
     
     
       
-        <title>Introduction to SPDX - SuperQ</title>
+        <title>Intro - SuperQ</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction to SPDX
+              Intro
             
           </span>
         </div>
@@ -687,6 +687,124 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/pyinstaller/" class="md-nav__link">
+        PyInstaller
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          SPDX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SPDX" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          SPDX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Intro
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Intro
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#term" class="md-nav__link">
+    Term
+  </a>
+  
+    <nav class="md-nav" aria-label="Term">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#license-identifier" class="md-nav__link">
+    License Identifier
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -724,6 +842,19 @@
     Term
   </a>
   
+    <nav class="md-nav" aria-label="Term">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#license-identifier" class="md-nav__link">
+    License Identifier
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -756,6 +887,24 @@
 </ul>
 </li>
 </ul>
+<h3 id="license-identifier">License Identifier</h3>
+<p>A document with a single license is defined by <strong>SPDX-License-Identifier</strong>, for example:<br />
+<div class="highlight"><pre><span></span><code>SPDX-License-Identifier: CDDL-1.0+
+SPDX-License-Identifier: MIT
+</code></pre></div></p>
+<p>Some commonly found licenses have been defined in the <a href="https://spdx.org/licenses/">SPDX License List</a>, it represents in a short form.  </p>
+<p>However, we might want to declare a private license, so a user defined license would be represented by <strong>LicenseRef-<idstring></strong>. (<code>idstring = 1*(ALPHA / DIGIT / "-" / "." )</code>). If a license of a file was claimed as <em>LicenseRef-2</em>, and its license was defined in other file, then the copy of actual text will be filled in the field -- <strong>ExtractedText</strong>.</p>
+<div class="highlight"><pre><span></span><code>LicenseID: LicenseRef-2
+ExtractedText: &lt;text&gt;This package includes the GRDDL parser developed by Hewlett Packard under the following license:
+© Copyright 2007 Hewlett-Packard Development Company, LP
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 
+
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. 
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. 
+The name of the author may not be used to endorse or promote products derived from this software without specific prior written permission. 
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS&#39;&#39; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;/text&gt;
+</code></pre></div>
 
               
             </article>
@@ -765,6 +914,26 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../python/pyinstaller/" class="md-footer__link md-footer__link--prev" aria-label="Previous: PyInstaller" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              PyInstaller
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -15,7 +15,7 @@
     
     
       
-        <title>CefPython, Upgrade CEF version - SuperQ</title>
+        <title>PyInstaller - SuperQ</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cefpython-chromium" class="md-skip">
+        <a href="#pyinstaller-a-useful-to-create-windows-executable-writting-by-python" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CefPython, Upgrade CEF version
+              PyInstaller
             
           </span>
         </div>
@@ -679,6 +679,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../cefpython_upgrade_cef/" class="md-nav__link">
+        CefPython, Upgrade CEF version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -690,55 +704,10 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          CefPython, Upgrade CEF version
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        CefPython, Upgrade CEF version
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    快速瀏覽更新步驟
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pyinstaller/" class="md-nav__link">
         PyInstaller
       </a>
+      
     </li>
   
 
@@ -818,21 +787,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    快速瀏覽更新步驟
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -845,99 +799,23 @@
                 
 
 
-<h1 id="cefpython-chromium">更新CefPython Chromium 版本筆記</h1>
+<h1 id="pyinstaller-a-useful-to-create-windows-executable-writting-by-python">PyInstaller - A useful to create Windows executable writting by Python.</h1>
 <blockquote>
-<p>更新日期：  2022/4/28<br />
-狀態：嘗試中</p>
+<p>Update：  2022/6/23  </p>
 </blockquote>
-<p>近日傳出Chrome瀏覽器出現漏洞(<a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1364">CVE-2022-1364</a>)，允許攻擊者遠端執行任意程式碼，官方的建議是更新至100.0.4896.127以後的版本。不過基於CefPython開發的專案就沒有那麼幸運了，因為目前最新CefPython的版本仍停留在66，看來只能手動更新CEF版本了。</p>
-<p>雖然作者有提供更新CEF版本的<a href="https://github.com/cztomczak/cefpython/issues/264">Workflow</a>, 但是可能版本差異過大，過程中遇到很多錯誤需要自行處理。</p>
-<h2 id="_1">快速瀏覽更新步驟</h2>
-<ul>
-<li>下載 <a href="https://github.com/cztomczak/cefpython.git">CefPython 原始碼</a></li>
-<li>下載 <a href="https://cef-builds.spotifycdn.com/index.html#windows64">Prebuilt</a> 不然從CEF原始碼編譯會太久</li>
-<li>解開下載的prebuilt壓縮檔，並且放在<strong>路徑較短的目錄</strong>，原因在於編譯過程中可能會出現路徑過程的錯誤: VS 2022 Cannot open compiler generated file: '': Invalid argument</li>
-<li><code>mkdir build &amp;&amp; cd build</code> 建立build資料夾並移至該資料夾</li>
-<li><code>pip install -r tools\requirements.txt</code></li>
-<li>修改 <em>src\cef_version_win.h</em> 此步驟要設定正確版號才能正確往下執行</li>
-<li>修改 <em>tools\common.py</em> 主要原因是我使用Python 3.10</li>
-<li>修改編譯設定<em>tools\common.py</em> &amp; <em>tools\automate.py</em>，增加VS2022路徑</li>
-<li>為了避免 code page (950) 錯誤，開啟 <em>C:\CefBin\cef_binary_101.0.15+gca159c5+chromium-101.0.4951.54_windows64\tests\ceftests\os_rendering_unittest.cc</em> 並加上下列兩行，此檔案必須另存為UTF-8 with BOM<ul>
-<li>
-<h1 id="pragma-warningdisable-4819">pragma warning(disable : 4819)</h1>
-</li>
-<li>
-<h1 id="pragma-warningdisable-4566">pragma warning(disable : 4566)</h1>
-</li>
-</ul>
-</li>
-<li><code>python ..\tools\automate.py --prebuilt-cef --build-dir C:\CefBin\</code></li>
-<li>上述指令完成會在<em>C:\CefBin</em>下產生一個新的資料夾，複製到<em>CefPython\build</em></li>
-<li>執行 <code>python ..\tool\build.py xx.x</code></li>
-</ul>
-<h2 id="cefpython-prebuilt">CefPython 編譯運作機制(Prebuilt)</h2>
-<ul>
-<li>執行 build.py 後，其內部會呼叫 cython_setup.py 去產生需要的標頭檔，第二次呼叫則腳本會檢查 <em>build\build_cefpython</em> 目錄下是否還有未處理的*.pyx檔案，沒有則代表已經產生 cefpython_py39_fixed.h</li>
-<li>cython_setup.py 會分析原始碼產生 handler 相關的原始碼與標頭。</li>
-</ul>
-<h2 id="trobleshooting">Trobleshooting</h2>
-<h3 id="pythonh">找不到Python.h</h3>
-<p>網路上可以找到Linux的解決方法，就是透過<code>sudo apt install python-dev</code>，但是我一開始是用Microsoft Store的方式安裝Python, 就沒有看到微軟有把相關的標頭檔放進去，所以最簡單的做法就是去官方網站下載Python安裝，並且修改以下Include Path，若你的安裝位置在<code>C:\Python\Python39\include</code>，則：<br />
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_python_include_path</span><span class="p">():</span>
-    <span class="n">base_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
-    <span class="n">try_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="si">{base_dir}</span><span class="s2">/include&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;</span><span class="si">{base_dir}</span><span class="s2">/../include/python</span><span class="si">{ver}</span><span class="s2">&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;</span><span class="si">{base_dir}</span><span class="s2">/../include/python</span><span class="si">{ver}</span><span class="s2">*&quot;</span><span class="p">,</span>
-                <span class="p">(</span><span class="s2">&quot;</span><span class="si">{base_dir}</span><span class="s2">/../Frameworks/Python.framework/Versions/</span><span class="si">{ver}</span><span class="s2">&quot;</span>
-                 <span class="s2">&quot;/include/python</span><span class="si">{ver}</span><span class="s2">*&quot;</span><span class="p">),</span>
-                <span class="s2">&quot;/usr/include/python</span><span class="si">{ver}</span><span class="s2">&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Python</span><span class="se">\\</span><span class="s2">Python39</span><span class="se">\\</span><span class="s2">include&quot;</span>
-                <span class="p">]</span>
-</code></pre></div></p>
-<h3 id="_2">修改編譯設定</h3>
-<p>以我使用的VS2022為例，由於目前CefPython只有支援VS2015以前的，所以必須手動修改<em>tool\common.py</em>, 於約Line 223行插入：<br />
-<div class="highlight"><pre><span></span><code><span class="n">VS2022_VCVARS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Program Files</span><span class="se">\\</span><span class="s2">Microsoft Visual Studio</span><span class="se">\\</span><span class="s2">2022</span><span class="se">\\</span><span class="s2">Preview</span><span class="se">\\</span><span class="s2">VC</span><span class="se">\\</span><span class="s2">Auxiliary</span><span class="se">\\</span><span class="s2">Build</span><span class="se">\\</span><span class="s2">vcvarsall.bat&quot;</span><span class="p">)</span>
-</code></pre></div></p>
-<p>但這個做的前提必須是已經裝過VC++了，沒有的話可以用<strong>Visual Studio Installer</strong>安裝<strong>Desktop development with C++</strong>.  </p>
-<p>如果是手動編譯CEF的話，則需要一併修改<em>automate.py</em>, 在<code>prepare_build_command()</code>中調整branch號碼，因為此修正在4896之後，因此修改如下：<br />
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">prepare_build_command</span><span class="p">(</span><span class="n">build_lib</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">vcvars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;On Windows VS env variables must be set up by calling vcvarsall.bat&quot;&quot;&quot;</span>
-    <span class="n">command</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Windows&quot;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">build_lib</span><span class="p">:</span>
-            <span class="o">...</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">Options</span><span class="o">.</span><span class="n">cef_branch</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">4896</span><span class="p">:</span>
-                <span class="n">command</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">VS2022_VCVARS</span><span class="p">)</span>
-            <span class="c1"># if int(Options.cef_branch) &gt;= 2704:</span>
-            <span class="c1">#     command.append(VS2015_VCVARS)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">command</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">VS2013_VCVARS</span><span class="p">)</span>
-            <span class="n">command</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">VS_PLATFORM_ARG</span><span class="p">)</span>
-        <span class="n">command</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&amp;&amp;&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">command</span>
-</code></pre></div></p>
-<h3 id="_3">修改版本號碼</h3>
-<p>下載下來的prebuilt檔案命名如<em>cef_binary_100.0.24+g0783cf8+chromium-100.0.4896.127_windows64</em>，則可以根據版號規則修改<em>cef_version_win.h</em>中的Marco定義如下：<br />
-<div class="highlight"><pre><span></span><code><span class="cp">#define CEF_VERSION &quot;100.0.24+g0783cf8+chromium-100.0.4896.127&quot;</span>
-<span class="cp">#define CHROME_VERSION_MAJOR 100</span>
-<span class="cp">#define CHROME_VERSION_MINOR 0</span>
-<span class="cp">#define CHROME_VERSION_BUILD 4896</span>
-</code></pre></div></p>
-<p>至於為什麼要修改上述定義，因為在編譯過程Python腳本會根據版號定義去尋找prebuilt目錄，不改會找不到檔案。</p>
-<h3 id="_4">其他編譯失敗問題</h3>
-<p>執行 build.py xx.x 會遇到幾個C++的編譯錯誤，整理在下方：</p>
-<h4 id="cefpython_py39_fixedh">找不到 cefpython_py39_fixed.h:</h4>
-<p>以我使用的Python版本為例，卻仍因為PY_MINOR_VERSION找不到定義而編譯失敗。最簡單的方式就是直接把<code>#include "../../build/build_cefpython/cefpython_py39_fixed.h"</code>放在最外層，保證一定可以include到。  </p>
-<h4 id="cefrequestcallback-not-found"><code>CefRequestCallback</code> not found:</h4>
-<p>從CEF的commit log可以看到已經被<code>CefCallback</code>取代了  </p>
-<h4 id="override-scoped_ptr-baseclosure-unknown-identifier"><code>OVERRIDE</code>, <code>scoped_ptr</code>, <code>base::Closure</code> unknown identifier:</h4>
-<p>這類問題都可以用CEF的codebase比較，拉新的程式碼過來，不過要用比的，不能全蓋掉。  </p>
-<h4 id="include-cefpython_appcpp">新增include到 cefpython_app.cpp:</h4>
-<ul>
-<li><code>#include "client_handler/request_context_handler.h"</code></li>
-<li><code>#include "include/cef_callback.h"</code></li>
-</ul>
+<p>It's painful when we want to distribute our python tools to other environment, we cannot make sure the Python version is the same with our machine, and the dependencies are also need to be installed in order to run perfectly, the following are several useful commands when creating Windows executable.</p>
+<p><strong>Basic command</strong>:  </p>
+<blockquote>
+<p>pyinstaller -F .\app.py<br />
+It will generate an executable called app.exe</p>
+</blockquote>
+<p><strong>Want to append data?</strong>:  </p>
+<blockquote>
+<p>pyinstaller -F .\app.py --add-data "<src>;<dst>"
+If you want to append your data to the binary, add <code>--add-data</code> to the parameter and:<br />
+* <src> is the source path in your current project.
+* <dst> is the path where it will extract to.</p>
+</blockquote>
 
               
             </article>
@@ -951,7 +829,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../snippet/random_negative_int/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Generate random negative integer" rel="prev">
+        <a href="../cefpython_upgrade_cef/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CefPython, Upgrade CEF version" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -960,20 +838,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Generate random negative integer
+              CefPython, Upgrade CEF version
             </div>
           </div>
         </a>
       
       
         
-        <a href="../pyinstaller/" class="md-footer__link md-footer__link--next" aria-label="Next: PyInstaller" rel="next">
+        <a href="../../spdx/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              PyInstaller
+              Intro
             </div>
           </div>
           <div class="md-footer__button md-icon">
