@@ -759,6 +759,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#export-load-image-from-container" class="md-nav__link">
+    Export / Load image from container
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -867,6 +874,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#export-load-image-from-container" class="md-nav__link">
+    Export / Load image from container
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -912,6 +926,21 @@
 <li>-m: Commit message</li>
 <li>REPOSITORY[:TAG]<blockquote>
 <p>docker commit -a "SuperQ" -m "Install dotnet6, dos2unix" b9a425aa0080 superq:v1</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="export-load-image-from-container">Export / Load image from container</h2>
+<ul>
+<li>
+<p>Export to <em>file</em> from <em>container</em></p>
+<blockquote>
+<p>docker save -o superq.tar superq</p>
+</blockquote>
+</li>
+<li>
+<p>Load from <em>file</em></p>
+<blockquote>
+<p>docker load -i superq.tar</p>
 </blockquote>
 </li>
 </ul>
