@@ -20,3 +20,12 @@
   * -m: Commit message
   * REPOSITORY[:TAG]
 > docker commit -a "SuperQ" -m "Install dotnet6, dos2unix" b9a425aa0080 superq:v1
+
+## Export / Load image from container
+
+* Export to *file* from *container*
+> docker save -o superq.tar superq
+
+* Load from *file*
+> docker load -i superq.tar
+
