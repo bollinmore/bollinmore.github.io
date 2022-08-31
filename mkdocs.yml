@@ -34,6 +34,7 @@ nav:
   - Note:
     - CefPython, Upgrade CEF version: python/cefpython_upgrade_cef.md
     - PyInstaller: python/pyinstaller.md
+    - Docker: docker/cookbook.md
   - SPDX:
     - Intro: spdx/intro.md
 
