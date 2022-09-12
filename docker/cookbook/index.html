@@ -707,6 +707,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../sqlite/run_cmd_wo_into_shell/" class="md-nav__link">
+        Execute SQLite command without openning interactive shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -746,23 +760,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#basic-commands" class="md-nav__link">
+    Basic commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-userinstead-of-running-as-root" class="md-nav__link">
+    Create a user(instead of running as root)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#build-a-image" class="md-nav__link">
     Build a image
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#commit-changes" class="md-nav__link">
     Commit changes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#export-load-image-from-container" class="md-nav__link">
     Export / Load image from container
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -861,23 +895,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#basic-commands" class="md-nav__link">
+    Basic commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-userinstead-of-running-as-root" class="md-nav__link">
+    Create a user(instead of running as root)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#build-a-image" class="md-nav__link">
     Build a image
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#commit-changes" class="md-nav__link">
     Commit changes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#export-load-image-from-container" class="md-nav__link">
     Export / Load image from container
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -904,14 +958,36 @@
 </blockquote>
 </li>
 </ul>
-<h2 id="build-a-image">Build a image</h2>
+<h2 id="basic-commands">Basic commands</h2>
+<h3 id="create-a-userinstead-of-running-as-root">Create a user(instead of running as root)</h3>
+<ul>
+<li>
+<p>Create a new user(superq) and a home directory</p>
+<blockquote>
+<p>useradd -m superq</p>
+</blockquote>
+</li>
+<li>
+<p>Set a password</p>
+<blockquote>
+<p>passwd superq</p>
+</blockquote>
+</li>
+<li>
+<p>Install sudo command and add this account to the sudoers file.</p>
+<blockquote>
+<p>apt install sudo -y</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="build-a-image">Build a image</h3>
 <ul>
 <li>Read Dockerfile from current directory and build new image named <code>superq</code><blockquote>
 <p>docker build -t superq . --no-cache</p>
 </blockquote>
 </li>
 </ul>
-<h2 id="commit-changes">Commit changes</h2>
+<h3 id="commit-changes">Commit changes</h3>
 <ul>
 <li>
 <p>Get the <em>CONTAINER ID</em> from <code>docker ps</code></p>
@@ -929,7 +1005,7 @@
 </blockquote>
 </li>
 </ul>
-<h2 id="export-load-image-from-container">Export / Load image from container</h2>
+<h3 id="export-load-image-from-container">Export / Load image from container</h3>
 <ul>
 <li>
 <p>Export to <em>file</em> from <em>container</em></p>
@@ -957,7 +1033,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../python/pyinstaller/" class="md-footer__link md-footer__link--prev" aria-label="Previous: PyInstaller" rel="prev">
+        <a href="../../sqlite/run_cmd_wo_into_shell/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Execute SQLite command without openning interactive shell" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -966,7 +1042,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              PyInstaller
+              Execute SQLite command without openning interactive shell
             </div>
           </div>
         </a>
