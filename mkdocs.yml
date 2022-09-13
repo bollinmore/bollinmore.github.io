@@ -3,6 +3,7 @@ site_author: Alvin Chen <bollinmore@gmail.com>
 nav:
   - Home: index.md
   - About: about.md
+  - BIOS Tool: BIOS/bios_tool.md
   - Leet Code:
     - 1. Two Sum: math/two_sum.md
     - 2. Add Two Numbers: math/add_two_numbers.md
