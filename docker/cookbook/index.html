@@ -220,22 +220,37 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../BIOS/bios_tool/" class="md-nav__link">
+        BIOS Tool
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_4">
           Leet Code
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Leet Code" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Leet Code
         </label>
@@ -608,18 +623,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_5">
           Code Snippet
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Code Snippet" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Code Snippet
         </label>
@@ -658,18 +673,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_6">
           Note
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Note" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Note
         </label>
@@ -826,18 +841,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           SPDX
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="SPDX" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           SPDX
         </label>
@@ -974,9 +989,21 @@
 </blockquote>
 </li>
 <li>
+<p>Or set a empty password instead</p>
+<blockquote>
+<p>usermod -p U6aMy0wojraho superq</p>
+</blockquote>
+</li>
+<li>
 <p>Install sudo command and add this account to the sudoers file.</p>
 <blockquote>
 <p>apt install sudo -y</p>
+</blockquote>
+</li>
+<li>
+<p>Rather than modify <em>/etc/sudoers</em> directly, grant a user with sudo privilege with command below: </p>
+<blockquote>
+<p>usermod -G sudo -a superq</p>
 </blockquote>
 </li>
 </ul>
@@ -1000,8 +1027,16 @@
 </li>
 <li>-a: Author</li>
 <li>-m: Commit message</li>
-<li>REPOSITORY[:TAG]<blockquote>
+<li>
+<p>REPOSITORY[:TAG]</p>
+<blockquote>
 <p>docker commit -a "SuperQ" -m "Install dotnet6, dos2unix" b9a425aa0080 superq:v1</p>
+</blockquote>
+</li>
+<li>
+<p>Simply overwrite current tag</p>
+<blockquote>
+<p>docker commit b9a425aa0080 superq:v1</p>
 </blockquote>
 </li>
 </ul>

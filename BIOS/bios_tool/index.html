@@ -15,7 +15,7 @@
     
     
       
-        <title>374. Guess Number Higher or Lower - SuperQ</title>
+        <title>BIOS Tool - SuperQ</title>
       
     
     
@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#374-guess-number-higher-or-lower" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              374. Guess Number Higher or Lower
+              BIOS Tool
             
           </span>
         </div>
@@ -219,11 +214,19 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../BIOS/bios_tool/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         BIOS Tool
       </a>
+      
     </li>
   
 
@@ -234,14 +237,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -542,73 +543,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          374. Guess Number Higher or Lower
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../binary_search/guess_number_higher_or_lower/" class="md-nav__link">
         374. Guess Number Higher or Lower
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#concept" class="md-nav__link">
-    Concept
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#complexity" class="md-nav__link">
-    Complexity
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#special-test-case" class="md-nav__link">
-    Special test case
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    Code
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -869,60 +808,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#concept" class="md-nav__link">
-    Concept
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#complexity" class="md-nav__link">
-    Complexity
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#special-test-case" class="md-nav__link">
-    Special test case
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    Code
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -930,73 +815,9 @@
                 
 
 
-<h1 id="374-guess-number-higher-or-lower">374. Guess Number Higher or Lower</h1>
-<p><a href="https://leetcode.com/problems/guess-number-higher-or-lower/">Source</a><br />
-<strong>Topic</strong>: Binary Search</p>
-<p>We are playing the Guess Game. The game is as follows:</p>
-<p>I pick a number from 1 to n. You have to guess which number I picked.</p>
-<p>Every time you guess wrong, I will tell you whether the number I picked is higher or lower than your guess.</p>
-<p>You call a pre-defined API int guess(int num), which returns three possible results:</p>
-<ul>
-<li>-1: Your guess is higher than the number I picked (i.e. num &gt; pick).</li>
-<li>1: Your guess is lower than the number I picked (i.e. num &lt; pick).</li>
-<li>0: your guess is equal to the number I picked (i.e. num == pick).</li>
-</ul>
-<p>Return the number that I picked.</p>
-<p><strong>Constraints</strong></p>
-<ul>
-<li>1 &lt;= n &lt;= 231 - 1</li>
-<li>1 &lt;= pick &lt;= n</li>
-</ul>
-<h2 id="concept">Concept</h2>
-<p>The idea is similar to <em>Binary Search</em> because we'll move the mid based on what <code>guess()</code> return, when:  </p>
-<ul>
-<li><code>guess(m) &gt; 0</code> =&gt; set <code>l = m+1</code></li>
-<li><code>guess(m) &lt; 0</code> =&gt; set <code>r = m-1</code></li>
-<li><code>guess(m) == 0</code> =&gt; Found answer</li>
-</ul>
-<p>We could use the condition <code>while(l&lt;=r)</code> or <code>while(true)</code> because we're ensure to find answer.</p>
-<h2 id="complexity">Complexity</h2>
-<p><strong>Time Complexity</strong>  </p>
-<p>O(logn)</p>
-<p><strong>Space Complexity</strong>  </p>
-<p>O(1)</p>
-<h2 id="special-test-case">Special test case</h2>
-<p><div class="highlight"><pre><span></span><code>2126753390
-1702766719
-</code></pre></div>
-The above case will cause buffer overflow exception if our expression is <code>(r+l)/2</code>.</p>
-<h2 id="code">Code</h2>
-<div class="highlight"><pre><span></span><code><span class="cm">/** </span>
-<span class="cm"> * Forward declaration of guess API.</span>
-<span class="cm"> * @param  num   your guess</span>
-<span class="cm"> * @return       -1 if num is lower than the guess number</span>
-<span class="cm"> *                1 if num is higher than the guess number</span>
-<span class="cm"> *               otherwise return 0</span>
-<span class="cm"> * int guess(int num);</span>
-<span class="cm"> */</span><span class="w"></span>
+  <h1>BIOS Tool</h1>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="k">public</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">guessNumber</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">&lt;=</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">l</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">l</span><span class="p">;</span><span class="w"> </span><span class="c1">// Note: (r+l)/2 will cause buffer overflow exception</span>
-<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">guess</span><span class="p">(</span><span class="n">m</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="k">else</span><span class="w"></span>
-<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
 
               
             </article>
@@ -1010,7 +831,7 @@ The above case will cause buffer overflow exception if our expression is <code>(
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../math/nim_game/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 292. Nim Game" rel="prev">
+        <a href="../../about/" class="md-footer__link md-footer__link--prev" aria-label="Previous: About" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1019,20 +840,20 @@ The above case will cause buffer overflow exception if our expression is <code>(
               <span class="md-footer__direction">
                 Previous
               </span>
-              292. Nim Game
+              About
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../math/third_maximum_number/" class="md-footer__link md-footer__link--next" aria-label="Next: 414. Third Maximum Number" rel="next">
+        <a href="../../math/two_sum/" class="md-footer__link md-footer__link--next" aria-label="Next: 1. Two Sum" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              414. Third Maximum Number
+              1. Two Sum
             </div>
           </div>
           <div class="md-footer__button md-icon">
