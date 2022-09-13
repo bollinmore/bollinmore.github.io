@@ -13,8 +13,14 @@
 * Set a password
 > passwd superq
 
+* Or set a empty password instead
+> usermod -p U6aMy0wojraho superq
+
 * Install sudo command and add this account to the sudoers file.
 > apt install sudo -y
+
+* Rather than modify */etc/sudoers* directly, grant a user with sudo privilege with command below: 
+> usermod -G sudo -a superq
 
 ### Build a image
 
@@ -31,6 +37,9 @@
   * -m: Commit message
   * REPOSITORY[:TAG]
 > docker commit -a "SuperQ" -m "Install dotnet6, dos2unix" b9a425aa0080 superq:v1
+
+* Simply overwrite current tag
+> docker commit b9a425aa0080 superq:v1
 
 ### Export / Load image from container
 
