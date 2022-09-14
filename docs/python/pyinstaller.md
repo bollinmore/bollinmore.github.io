@@ -13,3 +13,10 @@ If you want to append your data to the binary, add `--add-data` to the parameter
 * <src> is the source path in your current project.
 * <dst> is the path where it will extract to.
 
+**Issues of installing on Ubuntu 18.04**
+
+You might get the warning of *zlib-dev* is not installed when doing `pip3 install pyinstaller`, type the command below to install the necessary package:  
+> sudo apt install zlib1g-dev
+
+Once pyinstall was installed, you'll get *pyinstall command not found* if you try to type pyinstaller in the console, the default installation path is *~/.local/bin/pyinstaller*, you can create a symbolic link by:
+> sudo ln -s ~/.local/bin/pyinstaller /usr/bin/pyinstaller
