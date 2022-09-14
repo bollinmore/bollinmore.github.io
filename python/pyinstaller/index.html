@@ -859,6 +859,15 @@ If you want to append your data to the binary, add <code>--add-data</code> to th
 * <src> is the source path in your current project.
 * <dst> is the path where it will extract to.</p>
 </blockquote>
+<p><strong>Issues of installing on Ubuntu 18.04</strong></p>
+<p>You might get the warning of <em>zlib-dev</em> is not installed when doing <code>pip3 install pyinstaller</code>, type the command below to install the necessary package:  </p>
+<blockquote>
+<p>sudo apt install zlib1g-dev</p>
+</blockquote>
+<p>Once pyinstall was installed, you'll get <em>pyinstall command not found</em> if you try to type pyinstaller in the console, the default installation path is <em>~/.local/bin/pyinstaller</em>, you can create a symbolic link by:</p>
+<blockquote>
+<p>sudo ln -s ~/.local/bin/pyinstaller /usr/bin/pyinstaller</p>
+</blockquote>
 
               
             </article>
