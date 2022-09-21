@@ -5,22 +5,11 @@
 
 ## Basic commands
 
-### Create a user(instead of running as root)
+* Get the *CONTAINER ID* from `docker ps`
+> docker ps  
 
-* Create a new user(superq) and a home directory
-> useradd -m superq
-
-* Set a password
-> passwd superq
-
-* Or set a empty password instead
-> usermod -p U6aMy0wojraho superq
-
-* Install sudo command and add this account to the sudoers file.
-> apt install sudo -y
-
-* Rather than modify */etc/sudoers* directly, grant a user with sudo privilege with command below: 
-> usermod -G sudo -a superq
+* Launch a bash in the specified container
+> docker exec -it *container id* /bin/bash
 
 ### Build a image
 
@@ -28,9 +17,6 @@
 > docker build -t superq . --no-cache
 
 ### Commit changes
-
-* Get the *CONTAINER ID* from `docker ps`
-> docker ps  
 
 * Store the changes 
   * -a: Author
@@ -48,4 +34,3 @@
 
 * Load from *file*
 > docker load -i superq.tar
-
