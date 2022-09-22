@@ -40,6 +40,7 @@ nav:
       - Basic: docker/cookbook.md
       - Account: docker/account.md
       - Network: docker/network.md
+    - Lomorage: lomorage/basic.md
   - SPDX:
     - Intro: spdx/intro.md
 
