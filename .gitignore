@@ -2,3 +2,4 @@ _site
 docs/template.md
 site/
 xenv/
+.venv/

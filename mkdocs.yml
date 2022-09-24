@@ -43,6 +43,8 @@ nav:
     - Lomorage: lomorage/basic.md
   - SPDX:
     - Intro: spdx/intro.md
+  - Raspberry Pi:
+    - Nextcloud: raspberry_pi/nextcloud.md
 
 theme:
     name: material
