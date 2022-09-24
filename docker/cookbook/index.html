@@ -948,6 +948,54 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Raspberry Pi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Raspberry Pi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Raspberry Pi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../raspberry_pi/nextcloud/" class="md-nav__link">
+        Nextcloud
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1032,16 +1080,22 @@
 <h2 id="examples">Examples</h2>
 <ul>
 <li>Launch /bin/bash with interactive mode and mount ~proj to /tmp/xxx  <blockquote>
-<p>docker run --rm -it -v c:\users\bolli\proj:/tmp/xxx superq:latest /bin/bash</p>
+<p>docker run --name test --rm -it -v c:\users\bolli\proj:/tmp/xxx superq:latest /bin/bash  </p>
 </blockquote>
 </li>
+</ul>
+<p>Note:  </p>
+<ul>
+<li>If <em>--name test</em> is not specified, docker enginer will generate a random name.  </li>
+<li>The docker name is useful when removing a running container by <code>docker stop</code></li>
 </ul>
 <h2 id="basic-commands">Basic commands</h2>
 <ul>
 <li>
 <p>Get the <em>CONTAINER ID</em> from <code>docker ps</code></p>
 <blockquote>
-<p>docker ps  </p>
+<p>docker ps        # List all running containers
+docker ps -a     # List all containers(including stopped containers)</p>
 </blockquote>
 </li>
 <li>
