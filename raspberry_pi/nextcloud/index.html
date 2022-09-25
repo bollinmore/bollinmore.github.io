@@ -950,6 +950,26 @@
     Setting flow
   </a>
   
+    <nav class="md-nav" aria-label="Setting flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allow-normal-user-to-execute-docker" class="md-nav__link">
+    Allow normal user to execute docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assign-volume-to-container-to-persist-data" class="md-nav__link">
+    Assign volume to container to persist data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1003,6 +1023,26 @@
     Setting flow
   </a>
   
+    <nav class="md-nav" aria-label="Setting flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allow-normal-user-to-execute-docker" class="md-nav__link">
+    Allow normal user to execute docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assign-volume-to-container-to-persist-data" class="md-nav__link">
+    Assign volume to container to persist data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1033,12 +1073,34 @@
 <ol>
 <li>Flash Raspbin 11 to sd card and boot machine  </li>
 <li>Install docker<br />
-  2-1. Install by convinent script<br />
+  2-1. Install by <a href="https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script">convinent script</a><br />
   2-2. Allow normal user to execute docker  </li>
 <li>Setup nextcloud<br />
   3-1. Pull image<br />
-  3-2. Assign volume to container to persist data  </li>
+  3-2. Assign volume to container to <a href="https://hub.docker.com/_/nextcloud">persist data</a>  </li>
 </ol>
+<h4 id="allow-normal-user-to-execute-docker">Allow normal user to execute docker</h4>
+<p>After installed docker, run the command below to grant a non-prileged user to use docker:  </p>
+<blockquote>
+<p>sudo apt install -y uidmap
+dockerd-rootless-setuptool.sh install</p>
+</blockquote>
+<p>Start Nextcloud service...  </p>
+<blockquote>
+<p>docker run --name nc -d -p 8080:80 arm64v8/nextcloud</p>
+</blockquote>
+<h4 id="assign-volume-to-container-to-persist-data">Assign volume to container to persist data</h4>
+<ol>
+<li>Create some folders<blockquote>
+<p>mkdir -p nc/data &amp;&amp; mkdir -p nc/config</p>
+</blockquote>
+</li>
+<li>Bind folders via <code>-v</code> command<blockquote>
+<p>docker run --name nc -d -p 8080:80 -v $(pwd)/nc/data:/var/www/html/data -v $(pwd)/nc/config:/var/www/html/config arm64v8/nextcloud  </p>
+</blockquote>
+</li>
+</ol>
+<p>Nextcloud will put runtime data including photos, sqlite database and necessary information here, and config folder is used to hold current setting status.</p>
 
               
             </article>
