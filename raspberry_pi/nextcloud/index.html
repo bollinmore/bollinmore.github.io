@@ -1101,6 +1101,22 @@ dockerd-rootless-setuptool.sh install</p>
 </li>
 </ol>
 <p>Nextcloud will put runtime data including photos, sqlite database and necessary information here, and config folder is used to hold current setting status.</p>
+<p><strong>Troubleshooting - uid/gid doesn't exist</strong><br />
+However, the uid and gid <em>data</em> and <em>config</em> folders doesn't exist on your host:<br />
+<div class="highlight"><pre><span></span><code>$ ll
+drwxr-xr-x 2 100032 100032 4096 Sep 27 10:34 config
+drwxr-xr-x 2 100032 100032 4096 Sep 27 12:08 data
+</code></pre></div></p>
+<p>I tried to add the sub command <code>-u $(id -u ${USER}):$(id -g ${USER})</code>, but it doesn't help, and the container will stop automatically with no reason, you might think that we could copy these two folders with <code>sudo</code>, but the privilege setting might be lost.<br />
+So I create a new user and group with specified id(here the id is 100032):<br />
+<div class="highlight"><pre><span></span><code>$ sudo groupadd -g 100032 nextcloud
+$ sudo useradd -u 100032 nextcloud
+$ sudo passwd nextcloud
+$ ll
+drwxr-xr-x 2 nextcloud nextcloud 4096 Sep 27 12:35 config
+drwxrwx--- 4 nextcloud nextcloud 4096 Sep 27 12:45 data
+</code></pre></div></p>
+<p>Then you can switch to user <em>nextcloud</em> by <code>su nextcloud</code> and check the content inside those folders.  </p>
 
               
             </article>
