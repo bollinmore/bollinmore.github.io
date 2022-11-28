@@ -3,7 +3,11 @@ site_author: Alvin Chen <bollinmore@gmail.com>
 nav:
   - Home: index.md
   - About: about.md
-  - BIOS Tool: BIOS/bios_tool.md
+  - BIOS Tool: 
+    - Category: BIOS/bios_tool.md
+    - smbios: BIOS/smbios.md
+    - i2c: BIOS/i2c.md
+    - gpio: BIOS/gpio.md
   - Leet Code:
     - 1. Two Sum: leetcode/math/two_sum.md
     - 2. Add Two Numbers: leetcode/math/add_two_numbers.md
