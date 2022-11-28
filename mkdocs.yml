@@ -8,6 +8,7 @@ nav:
     - smbios: BIOS/smbios.md
     - i2c: BIOS/i2c.md
     - gpio: BIOS/gpio.md
+    - Variable: BIOS/variable.md
   - Leet Code:
     - 1. Two Sum: leetcode/math/two_sum.md
     - 2. Add Two Numbers: leetcode/math/add_two_numbers.md
