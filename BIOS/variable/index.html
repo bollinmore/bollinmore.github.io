@@ -15,7 +15,7 @@
     
     
       
-        <title>Intro - SuperQ</title>
+        <title>Variable - SuperQ</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-spdx" class="md-skip">
+        <a href="#var-and-varrc-comparision" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Variable
             
           </span>
         </div>
@@ -219,12 +219,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -247,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BIOS/bios_tool/" class="md-nav__link">
+      <a href="../bios_tool/" class="md-nav__link">
         Category
       </a>
     </li>
@@ -261,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BIOS/smbios/" class="md-nav__link">
+      <a href="../smbios/" class="md-nav__link">
         smbios
       </a>
     </li>
@@ -275,7 +277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BIOS/i2c/" class="md-nav__link">
+      <a href="../i2c/" class="md-nav__link">
         i2c
       </a>
     </li>
@@ -289,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BIOS/gpio/" class="md-nav__link">
+      <a href="../gpio/" class="md-nav__link">
         gpio
       </a>
     </li>
@@ -301,11 +303,48 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../BIOS/variable/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Variable
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Variable
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#var-and-varrc-comparision" class="md-nav__link">
+    .var and .varrc comparision
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -934,14 +973,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
@@ -962,65 +999,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Intro
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../spdx/intro/" class="md-nav__link">
         Intro
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#term" class="md-nav__link">
-    Term
-  </a>
-  
-    <nav class="md-nav" aria-label="Term">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#license-identifier" class="md-nav__link">
-    License Identifier
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1097,8 +1080,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1107,22 +1088,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#term" class="md-nav__link">
-    Term
+  <a href="#var-and-varrc-comparision" class="md-nav__link">
+    .var and .varrc comparision
   </a>
-  
-    <nav class="md-nav" aria-label="Term">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#license-identifier" class="md-nav__link">
-    License Identifier
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1140,40 +1108,33 @@
                 
 
 
-<h1 id="introduction-to-spdx">Introduction to SPDX</h1>
-<h2 id="term">Term</h2>
-<ul>
-<li>Releationship: can be used to indicate relationships between Packages, such as dependency relationships.</li>
-<li>Package information section: Packages are an abstract concept that can be used to refer to any distribution of software, typically consisting of one or more files and capable of containing sub-packages. <ul>
-<li>Cardinality: Optional, one or many.</li>
-</ul>
-</li>
-<li>File information section: It provides important meta information about a given file including licenses and copyright.<ul>
-<li>Cardinality: Optional, one or many.</li>
-<li>Files are assumed to be associated with the Package Information that immediately precedes it, if a package exists.</li>
-<li>If a File is not part of any package, it shall precede any Package Information section reference in the SPDX document.</li>
-<li>The first field to start off the description of a File shall be the File Name in tag:value format.</li>
-</ul>
-</li>
-</ul>
-<h3 id="license-identifier">License Identifier</h3>
-<p>A document with a single license is defined by <strong>SPDX-License-Identifier</strong>, for example:<br />
-<div class="highlight"><pre><span></span><code>SPDX-License-Identifier: CDDL-1.0+
-SPDX-License-Identifier: MIT
-</code></pre></div></p>
-<p>Some commonly found licenses have been defined in the <a href="https://spdx.org/licenses/">SPDX License List</a>, it represents in a short form.  </p>
-<p>However, we might want to declare a private license, so a user defined license would be represented by <strong>LicenseRef-<idstring></strong>. (<code>idstring = 1*(ALPHA / DIGIT / "-" / "." )</code>). If a license of a file was claimed as <em>LicenseRef-2</em>, and its license was defined in other file, then the copy of actual text will be filled in the field -- <strong>ExtractedText</strong>.</p>
-<div class="highlight"><pre><span></span><code>LicenseID: LicenseRef-2
-ExtractedText: &lt;text&gt;This package includes the GRDDL parser developed by Hewlett Packard under the following license:
-© Copyright 2007 Hewlett-Packard Development Company, LP
+  <h1>Variable</h1>
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 
-
-Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. 
-Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. 
-The name of the author may not be used to endorse or promote products derived from this software without specific prior written permission. 
-THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS&#39;&#39; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. &lt;/text&gt;
-</code></pre></div>
+<h2 id="var-and-varrc-comparision">.var and .varrc comparision</h2>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>.var</th>
+<th>.varrc</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generate</td>
+<td>VfrCompiler.exe</td>
+<td>VarCompiler.exe</td>
+<td></td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>This file used to describe the UEFI variable defaults<br>or a series of UEFI variable updates</td>
+<td>This file indicates the actual contents of UEFI Variable region<br>or a series of changes that must be made to the UEFI variable region</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
               
             </article>
@@ -1187,7 +1148,7 @@ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS&#39;&#39; AND ANY EXPRESS OR IMP
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../lomorage/basic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lomorage" rel="prev">
+        <a href="../gpio/" class="md-footer__link md-footer__link--prev" aria-label="Previous: gpio" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1196,20 +1157,20 @@ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS&#39;&#39; AND ANY EXPRESS OR IMP
               <span class="md-footer__direction">
                 Previous
               </span>
-              Lomorage
+              gpio
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../raspberry_pi/nextcloud/" class="md-footer__link md-footer__link--next" aria-label="Next: Nextcloud" rel="next">
+        <a href="../../leetcode/math/two_sum/" class="md-footer__link md-footer__link--next" aria-label="Next: 1. Two Sum" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Nextcloud
+              1. Two Sum
             </div>
           </div>
           <div class="md-footer__button md-icon">
