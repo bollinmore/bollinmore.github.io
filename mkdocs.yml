@@ -47,6 +47,7 @@ nav:
       - Network: docker/network.md
       - RClone: docker/rclone.md
     - Lomorage: lomorage/basic.md
+    - Git: git/cookbook.md
   - SPDX:
     - Intro: spdx/intro.md
   - Raspberry Pi:
