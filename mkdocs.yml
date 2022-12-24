@@ -52,6 +52,8 @@ nav:
     - Intro: spdx/intro.md
   - Raspberry Pi:
     - Nextcloud: raspberry_pi/nextcloud.md
+  - Python:
+    - Troubleshooting: python/troubleshooting.md
 
 theme:
     name: material
