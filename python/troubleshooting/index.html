@@ -1174,11 +1174,25 @@
 
 <h2 id="windows">Windows</h2>
 <ol>
-<li>Cannot run python on Git for Windows - Bash<br />
+<li>
+<p>Cannot run python on Git for Windows - Bash<br />
 <em>Solution:</em> Paste the command below in a bash window, then it will work.<br />
-<div class="highlight"><pre><span></span><code>echo &quot;alias python=&#39;winpty python.exe&#39;&quot; &gt;&gt; ~/.bashrc
+<div class="highlight"><pre><span></span><code>$ echo &quot;alias python=&#39;winpty python.exe&#39;&quot; &gt;&gt; ~/.bashrc
 . ~/.bashrc
-</code></pre></div></li>
+</code></pre></div></p>
+</li>
+<li>
+<p>How to run different python version on Windows?<br />
+<em>py --list</em> will list all available python versions on current machine.<br />
+<em>py -<ver> <cmd></em> will run command with specified version.<br />
+<div class="highlight"><pre><span></span><code>$ py --list
+  *               Active venv
+ -V:3.12          Python 3.12 (64-bit)
+ -V:3.10          Python 3.10 (64-bit)
+
+$ py -3.10 -m venv .venv
+</code></pre></div></p>
+</li>
 </ol>
 
               
