@@ -52,6 +52,7 @@ nav:
     - Intro: spdx/intro.md
   - Raspberry Pi:
     - Nextcloud: raspberry_pi/nextcloud.md
+    - PiKVM: raspberry_pi/pikvm.md
   - Python:
     - Troubleshooting: python/troubleshooting.md
 
