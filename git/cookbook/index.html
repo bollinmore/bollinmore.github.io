@@ -974,6 +974,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    Diff
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1191,6 +1198,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    Diff
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1216,8 +1230,12 @@
 <h3 id="submodule">Submodule</h3>
 <ul>
 <li>如果有多個submodule，不想因為其中一個submodule執行後得到非零回傳值而中止執行，官網的教學是讓加上 <code>|| :</code> 在指令後面。<br />
-<code>git submodule foreach ' run_some_cmd || :'</code><br />
-*</li>
+<code>git submodule foreach ' run_some_cmd || :'</code>  </li>
+</ul>
+<h3 id="diff">Diff</h3>
+<ul>
+<li>Exclude files from "git diff"<br />
+<code>git diff -- . ':(exclude)**/AssemblyInfo.cs' ':(exclude)**/*.dll' ':(exclude)**/*.exe'</code></li>
 </ul>
 
               
