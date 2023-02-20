@@ -9,3 +9,11 @@
 ### Diff
 * Exclude files from "git diff"  
 `git diff -- . ':(exclude)**/AssemblyInfo.cs' ':(exclude)**/*.dll' ':(exclude)**/*.exe'`
+
+### FAQ
+#### Certificate issue
+* When you encounter the problem: *SSL certificate problem: unable to get local issuer certificate*, you'll have 3 different methods below to workaround it:  
+    - Reinstall Git and select `native Windows secure channel library` as transport backend.
+    - `git config --global http.sslBackend schannel`
+    - `git config --global http.sslVerify false`
+
