@@ -981,6 +981,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificate-issue" class="md-nav__link">
+    Certificate issue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1205,6 +1225,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificate-issue" class="md-nav__link">
+    Certificate issue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1236,6 +1276,16 @@
 <ul>
 <li>Exclude files from "git diff"<br />
 <code>git diff -- . ':(exclude)**/AssemblyInfo.cs' ':(exclude)**/*.dll' ':(exclude)**/*.exe'</code></li>
+</ul>
+<h3 id="faq">FAQ</h3>
+<h4 id="certificate-issue">Certificate issue</h4>
+<ul>
+<li>When you encounter the problem: <em>SSL certificate problem: unable to get local issuer certificate</em>, you'll have 3 different methods below to workaround it:  <ul>
+<li>Reinstall Git and select <code>native Windows secure channel library</code> as transport backend.</li>
+<li><code>git config --global http.sslBackend schannel</code></li>
+<li><code>git config --global http.sslVerify false</code></li>
+</ul>
+</li>
 </ul>
 
               
