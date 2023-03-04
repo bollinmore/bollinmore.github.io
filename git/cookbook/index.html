@@ -1280,11 +1280,17 @@
 <h3 id="faq">FAQ</h3>
 <h4 id="certificate-issue">Certificate issue</h4>
 <ul>
-<li>When you encounter the problem: <em>SSL certificate problem: unable to get local issuer certificate</em>, you'll have 3 different methods below to workaround it:  <ul>
+<li>
+<p>When you encounter the problem: <em>SSL certificate problem: unable to get local issuer certificate</em>, you'll have 3 different methods below to workaround it:  </p>
+<ul>
 <li>Reinstall Git and select <code>native Windows secure channel library</code> as transport backend.</li>
 <li><code>git config --global http.sslBackend schannel</code></li>
 <li><code>git config --global http.sslVerify false</code></li>
 </ul>
+</li>
+<li>
+<p>Remove files or folder from commit history.<br />
+<code>git filter-branch --index-filter 'git rm -rf --cached --ignore-unmatch path_to_file' HEAD</code>  </p>
 </li>
 </ul>
 
