@@ -17,3 +17,5 @@
     - `git config --global http.sslBackend schannel`
     - `git config --global http.sslVerify false`
 
+* Remove files or folder from commit history.  
+`git filter-branch --index-filter 'git rm -rf --cached --ignore-unmatch path_to_file' HEAD`  
