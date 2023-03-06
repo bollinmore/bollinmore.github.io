@@ -1276,6 +1276,14 @@
 <ul>
 <li>Exclude files from "git diff"<br />
 <code>git diff -- . ':(exclude)**/AssemblyInfo.cs' ':(exclude)**/*.dll' ':(exclude)**/*.exe'</code></li>
+<li>Filter files from "git status"  <ul>
+<li>grep -i <em>swid</em> =&gt; search keyword, case-insensitive.</li>
+<li>cut -d ':' -f2 =&gt; use ':' as delimiter and use field #2</li>
+<li>tail -n+2 =&gt; start passing through on the second line of the output</li>
+<li>xargs =&gt; run <code>git diff</code> per line<br />
+<code>git status | grep -i swid | cut -d ':' -f2 | tail -n+2 | xargs git diff</code></li>
+</ul>
+</li>
 </ul>
 <h3 id="faq">FAQ</h3>
 <h4 id="certificate-issue">Certificate issue</h4>
