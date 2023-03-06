@@ -9,6 +9,12 @@
 ### Diff
 * Exclude files from "git diff"  
 `git diff -- . ':(exclude)**/AssemblyInfo.cs' ':(exclude)**/*.dll' ':(exclude)**/*.exe'`
+* Filter files from "git status"  
+    * grep -i *swid* => search keyword, case-insensitive.
+    * cut -d ':' -f2 => use ':' as delimiter and use field #2
+    * tail -n+2 => start passing through on the second line of the output
+    * xargs => run `git diff` per line  
+`git status | grep -i swid | cut -d ':' -f2 | tail -n+2 | xargs git diff`
 
 ### FAQ
 #### Certificate issue
