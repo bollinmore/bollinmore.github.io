@@ -8,7 +8,8 @@
 
 ### Diff
 * Exclude files from "git diff"  
-`git diff -- . ':(exclude)**/AssemblyInfo.cs' ':(exclude)**/*.dll' ':(exclude)**/*.exe'`
+`git diff -- . ':(exclude)**/AssemblyInfo.cs' ':(exclude)**/*.dll' ':(exclude)**/*.exe'`  
+    * It supports regular expression to exclude files => `':(exclude)file.*[cs|resx]`
 * Filter files from "git status"  
     * grep -i *swid* => search keyword, case-insensitive.
     * cut -d ':' -f2 => use ':' as delimiter and use field #2
