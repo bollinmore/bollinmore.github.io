@@ -982,6 +982,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cherry-pick" class="md-nav__link">
+    Cherry-pick
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#faq" class="md-nav__link">
     FAQ
   </a>
@@ -1226,6 +1233,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cherry-pick" class="md-nav__link">
+    Cherry-pick
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#faq" class="md-nav__link">
     FAQ
   </a>
@@ -1285,6 +1299,21 @@
 <li>tail -n+2 =&gt; start passing through on the second line of the output</li>
 <li>xargs =&gt; run <code>git diff</code> per line<br />
 <code>git status | grep -i swid | cut -d ':' -f2 | tail -n+2 | xargs git diff</code></li>
+</ul>
+</li>
+<li>Show unmerged path only
+<code>git diff --name-status --diff-filter=U</code><ul>
+<li>There're several options could be used: --diff-filter=[(A|C|D|M|R|T|U|X|B)…​[*]]</li>
+<li>Remove the preceding <strong>U</strong> =&gt; `sed -e 's/U\s//g'</li>
+</ul>
+</li>
+</ul>
+<h3 id="cherry-pick">Cherry-pick</h3>
+<ul>
+<li>How could I filter commits that contains specific path?<br />
+<code>git log branch_A..branch_B -- &lt;path&gt; ':(exclude)file.*[cs|resx]' | cut -d ' ' -f2 | tac | sed -e 's/\x1b\[[0-9;]*m//g' | xargs git cp</code>  <ul>
+<li>tac =&gt; Reverse the order of previous out in order to do cherry-pick in the ascending order.</li>
+<li>sed -e 's/\x1b[[0-9;]*m//g' =&gt; Remove the ANSI color codes from text stream.</li>
 </ul>
 </li>
 </ul>
