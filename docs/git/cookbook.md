@@ -16,6 +16,16 @@
     * tail -n+2 => start passing through on the second line of the output
     * xargs => run `git diff` per line  
 `git status | grep -i swid | cut -d ':' -f2 | tail -n+2 | xargs git diff`
+* Show unmerged path only
+`git diff --name-status --diff-filter=U`
+    * There're several options could be used: --diff-filter=[(A|C|D|M|R|T|U|X|B)…​[*]]
+    * Remove the preceding **U** => `sed -e 's/U\s//g'
+
+### Cherry-pick
+* How could I filter commits that contains specific path?  
+`git log branch_A..branch_B -- <path> ':(exclude)file.*[cs|resx]' | cut -d ' ' -f2 | tac | sed -e 's/\x1b\[[0-9;]*m//g' | xargs git cp`  
+    * tac => Reverse the order of previous out in order to do cherry-pick in the ascending order.
+    * sed -e 's/\x1b\[[0-9;]*m//g' => Remove the ANSI color codes from text stream.
 
 ### FAQ
 #### Certificate issue
