@@ -55,6 +55,7 @@ nav:
     - PiKVM: raspberry_pi/pikvm.md
   - Python:
     - Troubleshooting: python/troubleshooting.md
+    - Poetry: python/poetry.md
 
 theme:
     name: material
