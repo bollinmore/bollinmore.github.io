@@ -989,6 +989,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sparse-checkout" class="md-nav__link">
+    Sparse Checkout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#faq" class="md-nav__link">
     FAQ
   </a>
@@ -1180,6 +1187,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/poetry/" class="md-nav__link">
+        Poetry
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1235,6 +1256,13 @@
           <li class="md-nav__item">
   <a href="#cherry-pick" class="md-nav__link">
     Cherry-pick
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparse-checkout" class="md-nav__link">
+    Sparse Checkout
   </a>
   
 </li>
@@ -1317,6 +1345,16 @@
 </ul>
 </li>
 </ul>
+<h3 id="sparse-checkout">Sparse Checkout</h3>
+<p>With Git-Sparse-Checkout feature, it improves the performance of cloning repository.<br />
+The key point is to describe path in the <strong>.git/info/sparse-checkout</strong> and set <code>config.sparseCheckout true</code>.
+<div class="highlight"><pre><span></span><code>git init
+git remote add origin &lt;remote&gt;
+git config core.sparseCheckout true
+echo &quot;relative path to the file&quot; &gt;&gt; .git/info/sparse-checkout
+git fetch --depth=1 origin &lt;revision&gt;
+git checkout &lt;revision&gt;
+</code></pre></div></p>
 <h3 id="faq">FAQ</h3>
 <h4 id="certificate-issue">Certificate issue</h4>
 <ul>
