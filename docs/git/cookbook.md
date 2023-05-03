@@ -27,6 +27,18 @@
     * tac => Reverse the order of previous out in order to do cherry-pick in the ascending order.
     * sed -e 's/\x1b\[[0-9;]*m//g' => Remove the ANSI color codes from text stream.
 
+### Sparse Checkout
+With Git-Sparse-Checkout feature, it improves the performance of cloning repository.  
+The key point is to describe path in the **.git/info/sparse-checkout** and set `config.sparseCheckout true`.
+```
+git init
+git remote add origin <remote>
+git config core.sparseCheckout true
+echo "relative path to the file" >> .git/info/sparse-checkout
+git fetch --depth=1 origin <revision>
+git checkout <revision>
+```
+
 ### FAQ
 #### Certificate issue
 * When you encounter the problem: *SSL certificate problem: unable to get local issuer certificate*, you'll have 3 different methods below to workaround it:  
