@@ -56,6 +56,7 @@ nav:
   - Python:
     - Troubleshooting: python/troubleshooting.md
     - Poetry: python/poetry.md
+    - OCR: python/ocr.md
 
 theme:
     name: material
