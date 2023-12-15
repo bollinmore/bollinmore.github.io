@@ -56,6 +56,7 @@ nav:
   - Python:
     - Troubleshooting: python/troubleshooting.md
     - Poetry: python/poetry.md
+    - pip: python/pip.md
     - OCR: python/ocr.md
 
 theme:
