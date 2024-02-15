@@ -26,6 +26,7 @@ nav:
     - 96. Unique Binary Search Trees: leetcode/dp/unique_binary_search_trees.md
     - 142. Linked List Cycle II: leetcode/dp/linked_list_cycle2.md
     - 134. Gas Station: leetcode/array/gas_station.md
+    - 136. Single Number: leetcode/array/single-number.md
     - 179. Largest Number: leetcode/sorting/largest_number.md
     - 217. Contains Duplicate: leetcode/sorting/contains_duplicate.md
     - 219. Contains Duplicate II: leetcode/hash_table/contains_duplicate2.md
