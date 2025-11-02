@@ -53,6 +53,7 @@ nav:
     - Git: git/cookbook.md
   - SBOM:
     - SPDX: sbom/spdx.md
+    - FOSSology Intro: sbom/FOSSology_intro.md
     - ORT-FOSSology: sbom/ort-fossology.md
   - Raspberry Pi:
     - Nextcloud: raspberry_pi/nextcloud.md
