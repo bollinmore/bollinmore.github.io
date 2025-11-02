@@ -11,17 +11,17 @@
       
       
       
-        <link rel="prev" href="../poetry/">
+        <link rel="prev" href="../spdx/">
       
       
-        <link rel="next" href="../ocr/">
+        <link rel="next" href="../ort-fossology/">
       
       <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.0.5">
     
     
       
-        <title>pip - SuperQ</title>
+        <title>FOSSology Intro - SuperQ</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#install-local-package" class="md-skip">
+        <a href="#fossology" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              pip
+              FOSSology Intro
             
           </span>
         </div>
@@ -841,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cefpython_upgrade_cef/" class="md-nav__link">
+      <a href="../../python/cefpython_upgrade_cef/" class="md-nav__link">
         CefPython, Upgrade CEF version
       </a>
     </li>
@@ -855,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pyinstaller/" class="md-nav__link">
+      <a href="../../python/pyinstaller/" class="md-nav__link">
         PyInstaller
       </a>
     </li>
@@ -1007,18 +1007,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="true">
           SBOM
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -1036,7 +1038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sbom/spdx/" class="md-nav__link">
+      <a href="../spdx/" class="md-nav__link">
         SPDX
       </a>
     </li>
@@ -1048,11 +1050,148 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../sbom/FOSSology_intro/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          FOSSology Intro
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         FOSSology Intro
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fossology" class="md-nav__link">
+    1. FOSSology 系統安裝
+  </a>
+  
+    <nav class="md-nav" aria-label="1. FOSSology 系統安裝">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    方式一：使用 Docker Compose (推薦)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    方式二：快速單一容器安裝
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 上傳準備掃描的原始碼
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 上傳頁面中的每個分析選項的意義
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 工作排程中每個工作名稱的名詞解釋
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 如何解讀掃描結果？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-clearing-job" class="md-nav__link">
+    6. 人工審查的流程 (Clearing Job)
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 人工審查的流程 (Clearing Job)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    步驟一：單一文件審查與確認
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-scan" class="md-nav__link">
+    步驟二：批次處理 (Bulk Scan)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#false-positives" class="md-nav__link">
+    步驟三：處理誤判 (False Positives)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7. 如何匯出報表？有哪些匯出格式可以選擇？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-gitlab" class="md-nav__link">
+    8. 如何跟 GitLab 完美整合？
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1064,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sbom/ort-fossology/" class="md-nav__link">
+      <a href="../ort-fossology/" class="md-nav__link">
         ORT-FOSSology
       </a>
     </li>
@@ -1147,20 +1286,18 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       
       
-        <label class="md-nav__link" for="__nav_9" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_9" tabindex="0" aria-expanded="false">
           Python
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -1178,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../python/troubleshooting/" class="md-nav__link">
         Troubleshooting
       </a>
     </li>
@@ -1192,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../poetry/" class="md-nav__link">
+      <a href="../../python/poetry/" class="md-nav__link">
         Poetry
       </a>
     </li>
@@ -1204,61 +1341,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          pip
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../python/pip/" class="md-nav__link">
         pip
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-local-package" class="md-nav__link">
-    Install local package
-  </a>
-  
-    <nav class="md-nav" aria-label="Install local package">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pyprojecttoml" class="md-nav__link">
-    pyproject.toml
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1270,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ocr/" class="md-nav__link">
+      <a href="../../python/ocr/" class="md-nav__link">
         OCR
       </a>
     </li>
@@ -1301,6 +1388,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1309,22 +1398,105 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-local-package" class="md-nav__link">
-    Install local package
+  <a href="#1-fossology" class="md-nav__link">
+    1. FOSSology 系統安裝
   </a>
   
-    <nav class="md-nav" aria-label="Install local package">
+    <nav class="md-nav" aria-label="1. FOSSology 系統安裝">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pyprojecttoml" class="md-nav__link">
-    pyproject.toml
+  <a href="#docker-compose" class="md-nav__link">
+    方式一：使用 Docker Compose (推薦)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    方式二：快速單一容器安裝
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 上傳準備掃描的原始碼
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 上傳頁面中的每個分析選項的意義
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 工作排程中每個工作名稱的名詞解釋
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 如何解讀掃描結果？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-clearing-job" class="md-nav__link">
+    6. 人工審查的流程 (Clearing Job)
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 人工審查的流程 (Clearing Job)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    步驟一：單一文件審查與確認
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-scan" class="md-nav__link">
+    步驟二：批次處理 (Bulk Scan)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#false-positives" class="md-nav__link">
+    步驟三：處理誤判 (False Positives)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7. 如何匯出報表？有哪些匯出格式可以選擇？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-gitlab" class="md-nav__link">
+    8. 如何跟 GitLab 完美整合？
+  </a>
   
 </li>
       
@@ -1344,26 +1516,255 @@
 
 
 
-  <h1>pip</h1>
+<h1 id="fossology">FOSSology 基礎入門</h1>
+<p>FOSSology 是一個開源授權合規軟體系統與工具包，用於執行授權、版權和出口管制掃描，提供資料庫和網頁使用者介面 (Web UI) 來實現合規工作流程。</p>
+<h2 id="1-fossology">1. FOSSology 系統安裝</h2>
+<p>FOSSology 的後端使用 <strong>PostgreSQL</strong> 作為資料庫伺服器，並需要 <strong>Apache httpd 2.6</strong> 作為網頁伺服器。開發堆疊主要使用 C、C++ 和 PHP。</p>
+<h3 id="docker-compose">方式一：使用 Docker Compose (推薦)</h3>
+<p>此方法可確保資料持久性，並定義了多個容器服務（<code>scheduler</code>、<code>web</code> 和 <code>db</code>）。</p>
+<ol>
+<li><strong>啟動服務：</strong> 使用 <code>docker-compose up</code> 指令啟動所有三個服務。</li>
+<li><strong>存取與登入：</strong><ul>
+<li>開啟瀏覽器，存取網址：<code>http://IP_OF_DOCKER_HOST:8081/repo</code>。</li>
+<li>使用預設帳號密碼登入：<ul>
+<li><strong>使用者名稱 (Username):</strong> <code>fossy</code></li>
+<li><strong>密碼 (Password):</strong> <code>fossy</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="_1">方式二：快速單一容器安裝</h3>
+<p>此方法不管理資料持久性，不建議用於生產環境。</p>
+<ol>
+<li><strong>執行 Docker 容器：</strong>
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8081</span>:80<span class="w"> </span>fossology/fossology
+</code></pre></div></li>
+<li><strong>存取與登入：</strong> 登入資訊與上述相同。</li>
+</ol>
+<h2 id="2">2. 上傳準備掃描的原始碼</h2>
+<p>登入 FOSSology 後，可以透過多種方法上傳檔案（例如從伺服器、URL 或 Git 伺服器）。</p>
+<ol>
+<li><strong>導航至上傳頁面：</strong> 點擊選單中的 <strong>Upload</strong>。<br />
+<img alt="alt text" src="../img/upload-file.png" />  </li>
+<li><strong>選擇檔案：</strong> 選擇最簡單的方式 <strong>Upload from file</strong>，然後選擇要掃描的壓縮檔 (例如：tarball 或 zip 檔案)。</li>
+<li>選擇想要使用的分析方法。</li>
+</ol>
+<div style="page-break-after: always;"></div>
 
-<h2 id="install-local-package">Install local package</h2>
-<blockquote>
-<p>pip install -e path/to/package</p>
-</blockquote>
-<p>The <strong>-e</strong> keyword in pip facilitates the installation of packages from a local folder, yet it carries certain constraints. Notably, the package being installed must contain a <strong>pyproject.toml</strong> file, a prerequisite for its successful installation. Moreover, the usage of this feature necessitates an upgrade of pip to version <strong>21.3</strong> or beyond. More comprehensive details can be found in the discussion on How to install a package using pip in editable mode with pyproject.toml?."</p>
-<h3 id="pyprojecttoml">pyproject.toml</h3>
-<div class="highlight"><pre><span></span><code><span class="k">[project]</span>
-<span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;web&quot;</span>
-<span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.9.0&quot;</span>
-<span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Investment Dashboard&quot;</span>
-<span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s">&quot;flask&quot;</span><span class="p">,</span>
-<span class="p">]</span>
+<h2 id="3">3. 上傳頁面中的每個分析選項的意義</h2>
+<p>FOSSology 會先解包上傳的軟體包，然後對每個文件運行多個分析代理 (Agents)。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">區域/選項</th>
+<th style="text-align: left;">意義與功能</th>
+<th style="text-align: left;">支援來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Nomos License Analysis</strong></td>
+<td style="text-align: left;"><strong>授權掃描核心：</strong> 採用<strong>基於規則</strong>（rule-based）的正則表達式和語意關聯偵測授權，即使只找到一個關鍵字也會報告。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Monk License Analysis</strong></td>
+<td style="text-align: left;"><strong>授權掃描：</strong> 採用<strong>文字比對法</strong>，透過與資料庫中的原始授權文本比對相似度來確認。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ojo License Analysis</strong></td>
+<td style="text-align: left;"><strong>授權掃描：</strong> 專門掃描 <strong>SPDX 授權識別符</strong>，速度快且能理解 <code>WITH</code>、<code>AND</code> 或 <code>OR</code> 等連詞。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Copyright Analysis</strong></td>
+<td style="text-align: left;"><strong>版權掃描：</strong> 掃描文件中的版權聲明，具有非常低的誤報率（false negative finding）。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ECC Analysis</strong></td>
+<td style="text-align: left;"><strong>出口管制分析：</strong> 專門尋找與<strong>加密 (Crypto)</strong> 或<strong>出口管制 (Export Control)</strong> 相關的字樣。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Keyword Analysis</strong></td>
+<td style="text-align: left;"><strong>關鍵字掃描：</strong> 可檢查使用者自定義的敏感詞或公司名稱。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Package Analysis</strong></td>
+<td style="text-align: left;"><strong>套件分析：</strong> 偵測檔案中包含的所有第三方套件與元件。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ScanCode Toolkit</strong></td>
+<td style="text-align: left;">整合外部工具，用於掃描授權、版權、電子郵件和 URL，使用者可比較兩種工具的結果。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Automatic Concluded License Deciding</strong></td>
+<td style="text-align: left;">允許 FOSSology 自動確認最終授權決策。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Reuse</strong></td>
+<td style="text-align: left;">重複利用既有的分析結果和人工審查決策，只重新掃描有變更的檔案，有助於節省大量時間。</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
 
-<span class="k">[build-system]</span>
-<span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;flit_core&lt;4&quot;</span><span class="p">]</span>
-<span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;flit_core.buildapi&quot;</span>
-</code></pre></div>
+<h2 id="4">4. 工作排程中每個工作名稱的名詞解釋</h2>
+<p><img alt="alt text" src="../img/jobs.png" /></p>
+<p>當檔案上傳後，系統會分配一個或多個工作（Job）。這些工作由排程器（Scheduler）服務處理。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">工作階段/名稱</th>
+<th style="text-align: left;">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Unpack</strong></td>
+<td style="text-align: left;">將上傳的壓縮檔案解包，以便後續代理程式可以存取內部文件和資料夾。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Database Structure Creation</strong></td>
+<td style="text-align: left;">解包之後，創建一些內部的資料庫結構。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>[Agent Name] Analysis</strong></td>
+<td style="text-align: left;">運行選定的掃描代理程式（例如 Nomos、Monk、Copyright 等）來分析檔案內容，找到授權、版權等資訊。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>[Report Format] Generation</strong></td>
+<td style="text-align: left;">生成選定的報告文件（例如 Readme OSS 或 Debian Copyright），這也會被視為一個工作並排入隊列。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Completed</strong></td>
+<td style="text-align: left;">表示該工作已完成，可以查看掃描結果。</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+
+<h2 id="5">5. 如何解讀掃描結果？</h2>
+<p><img alt="alt text" src="../img/browse.png" /></p>
+<p>掃描工作完成後，點擊 <strong>Browse</strong> 即可進入專案頁面。</p>
+<ul>
+<li><strong>檔案清理狀態 (Clearing Status)：</strong> 檔案旁邊的圓點狀態用於追蹤審查進度。<ul>
+<li><strong>綠色 (Green)：</strong> 表示該文件已經過人工審查或確認（done/cleared）。</li>
+<li><strong>紅色 (Red)：</strong> 表示該文件需要人工檢查或審查（needs us to check）。</li>
+</ul>
+</li>
+<li><strong>Licenses 頁面：</strong> 點擊專案名稱下的 <strong>Licenses</strong> 連結，可以查看所有偵測到的授權條款彙總和數量。</li>
+<li><strong>詳細文件檢視：</strong> 點擊單個檔案名，左側顯示文件內容，右側顯示掃描結果。</li>
+<li><strong>掃描結果解讀：</strong> 每個代理程式都會報告其發現（found licenses）。<ul>
+<li>Nomos 會顯示透過哪些<strong>正則表達式和關鍵字</strong>匹配到授權。</li>
+<li>Monk 會顯示與資料庫中<strong>參考文本的相似度</strong>（例如 99% 相等）。</li>
+</ul>
+</li>
+<li><strong>Edited Results：</strong> 這是人工編輯或確認後的最終授權資訊，用於補充或修正自動工具的結果。</li>
+<li><strong>表格空白或 No_license_found：</strong> 如果表格完全空白且沒有顯示 <code>No_license_found</code>，可能代表自動掃描工具沒有偵測到任何授權資訊。</li>
+</ul>
+<div style="page-break-after: always;"></div>
+
+<h2 id="6-clearing-job">6. 人工審查的流程 (Clearing Job)</h2>
+<p>FOSSology 的審查（Clearing）流程允許審查員處理掃描工具發現的授權問題，並做出最終決策。</p>
+<h3 id="_2">步驟一：單一文件審查與確認</h3>
+<p><img alt="alt text" src="../img/edit-license.png" /></p>
+<ol>
+<li><strong>檢查狀態：</strong> 點選旁邊有<strong>紅色</strong>圓點的檔案。</li>
+<li><strong>確認授權：</strong> 在右側面板中，可以選擇文件與授權之間的關係，例如標記為 <strong>known licenses</strong>（已知授權）或 <strong>identified</strong>（已確認）。</li>
+<li><strong>使用比對工具：</strong> 可以使用 <strong>Monk</strong> 工具檢查文件內容與資料庫中的<strong>授權文本</strong>是否相似，這有助於確認。</li>
+<li><strong>儲存決策：</strong> 點擊 <strong>Submit</strong> (提交) 或 <strong>Edit</strong> (編輯)，並儲存您的決定。文件狀態將變為綠色 (done)。</li>
+<li><strong>特殊標記：</strong> 您可以手動標記決策：<ul>
+<li><strong>Irrelevant：</strong> 該檔案不具備主體合規意義。</li>
+<li><strong>Do not use：</strong> 該檔案禁止導入專案。</li>
+<li><strong>Non-Functional：</strong> 該檔案是非功能性或說明性文件。</li>
+</ul>
+</li>
+</ol>
+<h3 id="bulk-scan">步驟二：批次處理 (Bulk Scan)</h3>
+<p>當許多檔案包含<strong>相同的授權文本</strong>時，使用批次掃描來加速審查。</p>
+<ol>
+<li><strong>複製授權文本：</strong> 在單個檔案的審查頁面中，複製重複出現的授權文本段落。</li>
+<li><strong>排程批次掃描：</strong> 點擊 <strong>Bulk</strong> 按鈕，貼上文本，並指定該文本的最終授權結論。</li>
+<li><strong>自動確認：</strong> FOSSology 會檢查所有包含該文本的檔案，並自動確認其授權，從而將大量檔案的狀態轉為綠色。</li>
+</ol>
+<h3 id="false-positives">步驟三：處理誤判 (False Positives)</h3>
+<p>對於掃描器可能報告的誤判（例如版權掃描中的錯誤版權聲明），您可以手動<strong>停用 (Deactivate)</strong> 它們，使其不會出現在最終報告中。</p>
+<div style="page-break-after: always;"></div>
+
+<h2 id="7">7. 如何匯出報表？有哪些匯出格式可以選擇？</h2>
+<p><img alt="alt text" src="../img/export.png" /></p>
+<p>審查完成後，您可以回到專案頁面，執行 <strong>Actions</strong>，然後選擇匯出報告。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">報告格式</th>
+<th style="text-align: left;">描述</th>
+<th style="text-align: left;">支援來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Readme OSS</strong></td>
+<td style="text-align: left;">純文本格式報告，列出已確認的授權文本和版權聲明。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Debian Copyright</strong></td>
+<td style="text-align: left;">Debian 套件所需的版權格式。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPDX</strong></td>
+<td style="text-align: left;">支援 <strong>Tag value</strong> 和 <strong>RDF</strong> 兩種格式。可以一鍵生成 SPDX 文件。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CSV</strong></td>
+<td style="text-align: left;">可用於匯出所有找到的版權聲明。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Word Document output</strong></td>
+<td style="text-align: left;">支援 Word 文件格式輸出。</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CycloneDX</strong></td>
+<td style="text-align: left;">正在規劃中的報告格式。</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong> 報告生成本身也是一個排程工作。</p>
+<div style="page-break-after: always;"></div>
+
+<h2 id="8-gitlab">8. 如何跟 GitLab 完美整合？</h2>
+<p>FOSSology 旨在將合規檢查前移到持續整合 (CI) 流程中，實現<strong>持續掃描 (Continuous Scan)</strong>，從而減少整體審計工作量並加速發佈週期。</p>
+<ol>
+<li><strong>整合方式：</strong> FOSSology 提供了針對 CI/CD 流程的輕量級版本，並支援將其 Docker 映像檔整合到 GitLab CI/CD 管道中。</li>
+<li><strong>持續檢查：</strong> 在開發者提交程式碼或引入新依賴時，CI 掃描會立即運行，檢查<strong>授權</strong>、<strong>版權</strong>和<strong>關鍵字</strong>。</li>
+<li><strong>白名單機制 (<code>whitelist.json</code>)：</strong><ul>
+<li>CI 掃描依賴於 <strong><code>whitelist.json</code></strong> 文件，該文件列出了<strong>允許發佈</strong>的授權條款 (例如 GPL 2.0+)。</li>
+<li>如果掃描到任何<strong>不在白名單內</strong>的授權，CI 流程會立即失敗，並顯示「紅旗」（red flag），要求開發者在早期階段解決合規問題。</li>
+<li>此文件也可用於<strong>排除掃描</strong>特定的文件或資料夾（例如測試檔案或配置資料夾），並支援萬用字元（glob characters）。</li>
+</ul>
+</li>
+<li><strong>掃描模式選擇：</strong> CI 支援兩種模式：<ul>
+<li><strong>Diff Scanning Mode (差異掃描模式)：</strong> 預設模式，僅掃描程式碼貢獻或合併請求中<strong>發生變更的行</strong>，速度非常快。</li>
+<li><strong>Repo Scan (儲存庫掃描)：</strong> 進行完整儲存庫掃描，適用於稽核或 Git 標籤/發佈。</li>
+</ul>
+</li>
+<li><strong>好處：</strong> 頻繁的檢查使得稽核工作更小、更快，減少了在發佈週期的後期進行重大變更的需求。</li>
+</ol>
 
 
   
