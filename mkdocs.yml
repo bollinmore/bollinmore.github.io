@@ -67,7 +67,7 @@ nav:
 theme:
     name: material
     font: 
-      text: Salsa
+      text: Open Sans
     logo: images/favicon.png
     favicon: images/favicon.png
     custom_dir: custom_theme/
