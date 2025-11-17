@@ -3,6 +3,8 @@ site_author: Alvin Chen <bollinmore@gmail.com>
 nav:
   - Home: index.md
   - About: about.md
+  - AI: 
+    - Doc as RAG MCP: AI/doc_as_rag_mcp.md
   - BIOS Tool: 
     - Category: BIOS/bios_tool.md
     - smbios: BIOS/smbios.md
