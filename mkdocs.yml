@@ -64,6 +64,8 @@ nav:
     - Poetry: python/poetry.md
     - pip: python/pip.md
     - OCR: python/ocr.md
+  - Tech Blog:
+    - CNVi vs PCIe WiFi: technical/cnvi_vs_pcie.md
 
 theme:
     name: material
