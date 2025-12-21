@@ -56,6 +56,7 @@ nav:
     - FOSSology Intro: sbom/FOSSology_intro.md
     - ORT-FOSSology: sbom/ort-fossology.md
     - DependencyCheck: sbom/DependencyCheck.md
+    - Syft: sbom/Syft.md
   - Raspberry Pi:
     - Nextcloud: raspberry_pi/nextcloud.md
     - PiKVM: raspberry_pi/pikvm.md
