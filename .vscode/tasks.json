@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "MkDocs Serve",
+			"type": "shell",
+			"windows": {
+				"command": "${workspaceFolder}\\.venv\\Scripts\\python.exe -m mkdocs serve",
+				"options": {
+					"shell": {
+						"executable": "cmd.exe",
+						"args": ["/C"]
+					}
+				}
+			},
+			"linux": {
+				"command": ".venv/bin/python -m mkdocs serve"
+			},
+			"osx": {
+				"command": ".venv/bin/python -m mkdocs serve"
+			},
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
